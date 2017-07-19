@@ -1,3 +1,2 @@
-permalink: :title
-permalink: pretty
+permalink: /:title/
 plugins:
