@@ -1,0 +1,22 @@
+<div class="sidebar">
+        <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link {% if page.url != '/all-comics/' and '/popular/' and '/challenge/' %}active{% endif %}" href="{{ site.url }}"><i class="icon-speedometer"></i>HOME<span class="badge badge-info">NEW</span></a>
+            </li>
+            <li class="nav-title">COMIC- ON {{ page.title }}</li>
+            <li class="nav-item">
+                <a class="nav-link {% if page.url == '/all-comics/' %}active{% endif %}" href="{{ site.url }}/all-comics/"><i class="icon-pie-chart"></i>ALL COMICS</a>
+            </li>
+            <li class="nav-item" style="">
+                <a class="nav-link {% if page.url == '/popular/' %}active{% endif %}" href="{{ site.url }}/popular/"><i class="icon-pie-chart"></i>POPULAR</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if page.url == '/challenge/' %}active{% endif %}" href="{{ site.url }}/challenge/"><i class="icon-calculator"></i>CHALLENGE<span class="badge badge-info">NEW</span></a>
+            </li>
+            <li class="nav-item" style="">
+                <a class="nav-link" href="#"><i class="icon-pie-chart"></i>BLOG</a>
+            </li>
+        </ul>
+        </nav>
+    </div>

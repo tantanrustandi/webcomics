@@ -1,0 +1,59 @@
+---
+layout: default
+title: All Comics
+---
+
+<div class="card">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <h4 class="card-title mb-0">ALL COMICS</h4>
+                                        <div class="small text-muted">November 2017</div>
+                                    </div>
+                                    <!--/.col-->
+                                    <div class="col-sm-7 hidden-sm-down">
+                                        
+                                        <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+                                            <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
+                                                <label class="btn btn-outline-secondary">
+                                                    <input name="options" id="option1" type="radio">Day
+                                                </label>
+                                                <label class="btn btn-outline-secondary active">
+                                                    <input name="options" id="option2" checked="" type="radio">Month
+                                                </label>
+                                                <label class="btn btn-outline-secondary">
+                                                    <input name="options" id="option3" type="radio">Year
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.col-->
+                                </div>
+                                <div class="row">
+                        {% for post in site.categories.All-Comics %}
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card card-inverse card-primary">
+                            <img src="{{post.read-comics-img}}">                                
+                                <div class="card-block pb-0">
+                                    <div class="btn-group float-right">
+                                        <button type="button" class="btn btn-transparent active dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="icon-book-open icons"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="{{site.baseurl}}{{post.url}}">READ ONLINE</a>
+                                            <a class="dropdown-item" href="#">DOWNLOAD</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="mb-0">{{post.sub-title}}</h4>
+                                    <p>
+                                        Chapter {{post.chapter}} - {{post.title}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}                   
+                    </div>
+                                <!--/.row-->
+                            </div>
+</div>
+                        

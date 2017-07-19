@@ -1,0 +1,43 @@
+{% include header.html %}
+{% include chapter.html %}
+{% include nav-read.html %}
+<div class="app-body">
+<div class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="icon-note"></i><span class="badge badge-info">NEW</span>{{ page.sub-title }} - {{ page.chapter }}</a>
+                        </li>
+                        <li class="nav-title">
+                            Autor<br>
+                            ------------------------------------------------<br>
+{% for post in categories %}{{post.author}}{% endfor %}
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{site.url}}"><i class="icon-home"></i>BACK TO HOME
+                            
+                            {% for post in categories %}
+<a class="nav-link" href="{{site.baseurl}}{{post.url}}"><i class="icon-book-open"></i> Chapter {{post.chapter}}</a>
+{% endfor %}
+                        </li>
+                        <li class="divider"></li>
+                        <li class="nav-title">
+                            Synopsis<br>
+                            ------------------------------------------------<br>
+                            {% for post in categories %}{{post.description}}{% endfor %}
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+<main class="main">
+    <!-- Breadcrumb -->
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+{{ content }}
+
+
+		</div>
+	</div>
+</div>
+{% include app-footer.html %}
+{% include footer.html %}
